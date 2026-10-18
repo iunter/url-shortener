@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet author="Ivan (generated)" id="1792293253729-1">
+        <createTable tableName="urls">
+            <column name="short_url" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="urlsPK"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP(6) WITH TIME ZONE"/>
+            <column name="expired_at" type="TIMESTAMP(6) WITH TIME ZONE"/>
+            <column name="long_url" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
